@@ -1,0 +1,405 @@
+05D329D0  | 55                           | push ebp                                |
+05D329D1  | 8BEC                         | mov ebp,esp                             |
+05D329D3  | 6A FF                        | push FFFFFFFF                           |
+05D329D5  | 68 AE54D505                  | push 5D554AE                            |
+05D329DA  | 64:A1 00000000               | mov eax,dword ptr fs:[0]                |
+05D329E0  | 50                           | push eax                                |
+05D329E1  | 81EC 6C010000                | sub esp,16C                             |
+05D329E7  | A1 DC15D605                  | mov eax,dword ptr ds:[5D615DC]          |
+05D329EC  | 33C5                         | xor eax,ebp                             |
+05D329EE  | 8945 F0                      | mov dword ptr ss:[ebp-10],eax           |
+05D329F1  | 53                           | push ebx                                |
+05D329F2  | 56                           | push esi                                |
+05D329F3  | 57                           | push edi                                |
+05D329F4  | 50                           | push eax                                |
+05D329F5  | 8D45 F4                      | lea eax,dword ptr ss:[ebp-C]            |
+05D329F8  | 64:A3 00000000               | mov dword ptr fs:[0],eax                |
+05D329FE  | 8BD9                         | mov ebx,ecx                             |
+05D32A00  | 899D D4FEFFFF                | mov dword ptr ss:[ebp-12C],ebx          |
+05D32A06  | E8 05EDFFFF                  | call 5D31710                            |
+05D32A0B  | 33D2                         | xor edx,edx                             |
+05D32A0D  | 8BC8                         | mov ecx,eax                             |
+05D32A0F  | 85C9                         | test ecx,ecx                            |
+05D32A11  | 0F95C2                       | setne dl                                |
+05D32A14  | 85D2                         | test edx,edx                            |
+05D32A16  | 75 0A                        | jne 5D32A22                             |
+05D32A18  | 68 05400080                  | push 80004005                           |
+05D32A1D  | E8 1EEFFFFF                  | call 5D31940                            |
+05D32A22  | 8B01                         | mov eax,dword ptr ds:[ecx]              |
+05D32A24  | FF50 0C                      | call dword ptr ds:[eax+C]               |
+05D32A27  | 83C0 10                      | add eax,10                              |
+05D32A2A  | 8985 CCFEFFFF                | mov dword ptr ss:[ebp-134],eax          |
+05D32A30  | C745 FC 00000000             | mov dword ptr ss:[ebp-4],0              |
+05D32A37  | E8 D4ECFFFF                  | call 5D31710                            |
+05D32A3C  | 33C9                         | xor ecx,ecx                             |
+05D32A3E  | 8BD0                         | mov edx,eax                             |
+05D32A40  | 85D2                         | test edx,edx                            |
+05D32A42  | 0F95C1                       | setne cl                                |
+05D32A45  | 85C9                         | test ecx,ecx                            |
+05D32A47  | 75 0A                        | jne 5D32A53                             |
+05D32A49  | 68 05400080                  | push 80004005                           |
+05D32A4E  | E8 EDEEFFFF                  | call 5D31940                            |
+05D32A53  | 8B02                         | mov eax,dword ptr ds:[edx]              |
+05D32A55  | 8BCA                         | mov ecx,edx                             |
+05D32A57  | FF50 0C                      | call dword ptr ds:[eax+C]               |
+05D32A5A  | 8D70 10                      | lea esi,dword ptr ds:[eax+10]           |
+05D32A5D  | 89B5 D0FEFFFF                | mov dword ptr ss:[ebp-130],esi          |
+05D32A63  | 6A 2B                        | push 2B                                 |
+05D32A65  | 8D85 D9FEFFFF                | lea eax,dword ptr ss:[ebp-127]          |
+05D32A6B  | C645 FC 01                   | mov byte ptr ss:[ebp-4],1               |
+05D32A6F  | 6A 00                        | push 0                                  |
+05D32A71  | 50                           | push eax                                |
+05D32A72  | C685 D8FEFFFF 00             | mov byte ptr ss:[ebp-128],0             |
+05D32A79  | E8 A2C50000                  | call 5D3F020                            |
+05D32A7E  | 83C4 0C                      | add esp,C                               |
+05D32A81  | 8D85 04FFFFFF                | lea eax,dword ptr ss:[ebp-FC]           |
+05D32A87  | 68 8C000000                  | push 8C                                 |
+05D32A8C  | 6A 00                        | push 0                                  |
+05D32A8E  | 50                           | push eax                                |
+05D32A8F  | E8 8CC50000                  | call 5D3F020                            |
+05D32A94  | 83C4 0C                      | add esp,C                               |
+05D32A97  | 8D4D 90                      | lea ecx,dword ptr ss:[ebp-70]           |
+05D32A9A  | E8 21040000                  | call 5D32EC0                            |
+05D32A9F  | 8D85 CCFEFFFF                | lea eax,dword ptr ss:[ebp-134]          |
+05D32AA5  | C645 FC 02                   | mov byte ptr ss:[ebp-4],2               |
+05D32AA9  | 50                           | push eax                                |
+05D32AAA  | 8D4B 44                      | lea ecx,dword ptr ds:[ebx+44]           |
+05D32AAD  | E8 BE470000                  | call 5D37270                            |
+05D32AB2  | 8BBD CCFEFFFF                | mov edi,dword ptr ss:[ebp-134]          |
+05D32AB8  | 8B47 F4                      | mov eax,dword ptr ds:[edi-C]            |
+05D32ABB  | 83F8 20                      | cmp eax,20                              | 20:' '
+05D32ABE  | 0F8C 13030000                | jl 5D32DD7                              |
+05D32AC4  | 83F8 28                      | cmp eax,28                              | 28:'('
+05D32AC7  | 0F8F 0A030000                | jg 5D32DD7                              |
+05D32ACD  | 6A 00                        | push 0                                  |
+05D32ACF  | 6A 00                        | push 0                                  |
+05D32AD1  | 68 F0000000                  | push F0                                 |
+05D32AD6  | FF73 54                      | push dword ptr ds:[ebx+54]              |
+05D32AD9  | E8 FCC30700                  | call 5DAEEDA                            |
+05D32ADE  | 90                           | nop                                     |
+05D32ADF  | 85C0                         | test eax,eax                            |
+05D32AE1  | 8D85 CCFEFFFF                | lea eax,dword ptr ss:[ebp-134]          |
+05D32AE7  | 51                           | push ecx                                |
+05D32AE8  | 8BCC                         | mov ecx,esp                             |
+05D32AEA  | 0F95C3                       | setne bl                                |
+05D32AED  | 50                           | push eax                                |
+05D32AEE  | E8 2DEDFFFF                  | call 5D31820                            |
+05D32AF3  | 8ACB                         | mov cl,bl                               |
+05D32AF5  | E8 16FCFFFF                  | call 5D32710                            |
+05D32AFA  | 83C4 04                      | add esp,4                               |
+05D32AFD  | 8D85 D8FEFFFF                | lea eax,dword ptr ss:[ebp-128]          |
+05D32B03  | 50                           | push eax                                |
+05D32B04  | A1 843FD605                  | mov eax,dword ptr ds:[5D63F84]          |
+05D32B09  | 57                           | push edi                                |
+05D32B0A  | 8B00                         | mov eax,dword ptr ds:[eax]              |
+05D32B0C  | FFD0                         | call eax                                |
+05D32B0E  | 83C0 03                      | add eax,3                               |
+05D32B11  | 83F8 0A                      | cmp eax,A                               | A:'\n'
+05D32B14  | 0F87 95020000                | ja 5D32DAF                              |
+05D32B1A  | FF2485 882ED305              | jmp dword ptr ds:[eax*4+5D32E88]        |
+05D32B21  | FFB5 2CFFFFFF                | push dword ptr ss:[ebp-D4]              |
+05D32B27  | 8D85 A8FEFFFF                | lea eax,dword ptr ss:[ebp-158]          |
+05D32B2D  | FFB5 28FFFFFF                | push dword ptr ss:[ebp-D8]              |
+05D32B33  | 50                           | push eax                                |
+05D32B34  | E8 37E6FFFF                  | call 5D31170                            |
+05D32B39  | 83C4 0C                      | add esp,C                               |
+05D32B3C  | 8D85 88FEFFFF                | lea eax,dword ptr ss:[ebp-178]          |
+05D32B42  | FFB5 34FFFFFF                | push dword ptr ss:[ebp-CC]              |
+05D32B48  | FFB5 30FFFFFF                | push dword ptr ss:[ebp-D0]              |
+05D32B4E  | 50                           | push eax                                |
+05D32B4F  | E8 1CE6FFFF                  | call 5D31170                            |
+05D32B54  | 83C4 0C                      | add esp,C                               |
+05D32B57  | 8D85 98FEFFFF                | lea eax,dword ptr ss:[ebp-168]          |
+05D32B5D  | FFB5 3CFFFFFF                | push dword ptr ss:[ebp-C4]              |
+05D32B63  | FFB5 38FFFFFF                | push dword ptr ss:[ebp-C8]              |
+05D32B69  | 50                           | push eax                                |
+05D32B6A  | E8 01E6FFFF                  | call 5D31170                            |
+05D32B6F  | 8B9D D4FEFFFF                | mov ebx,dword ptr ss:[ebp-12C]          |
+05D32B75  | 83C4 0C                      | add esp,C                               |
+05D32B78  | 8BCB                         | mov ecx,ebx                             |
+05D32B7A  | F3:0F6F00                    | movdqu xmm0,xmmword ptr ds:[eax]        |
+05D32B7E  | F3:0F7F85 B8FEFFFF           | movdqu xmmword ptr ss:[ebp-148],xmm0    |
+05D32B86  | E8 25F0FFFF                  | call 5D31BB0                            |
+05D32B8B  | F3:0F6F85 B8FEFFFF           | movdqu xmm0,xmmword ptr ss:[ebp-148]    |
+05D32B93  | 66:0FC5C0 06                 | pextrw eax,xmm0,6                       |
+05D32B98  | 0FB7C0                       | movzx eax,ax                            |
+05D32B9B  | 50                           | push eax                                |
+05D32B9C  | 66:0FC5C0 05                 | pextrw eax,xmm0,5                       |
+05D32BA1  | 0FB7C0                       | movzx eax,ax                            |
+05D32BA4  | 50                           | push eax                                |
+05D32BA5  | 66:0FC5C0 04                 | pextrw eax,xmm0,4                       |
+05D32BAA  | 0FB7C0                       | movzx eax,ax                            |
+05D32BAD  | 50                           | push eax                                |
+05D32BAE  | 66:0FC5C0 03                 | pextrw eax,xmm0,3                       |
+05D32BB3  | 0FB7C0                       | movzx eax,ax                            |
+05D32BB6  | 50                           | push eax                                |
+05D32BB7  | 66:0FC5C0 01                 | pextrw eax,xmm0,1                       |
+05D32BBC  | 0FB7C0                       | movzx eax,ax                            |
+05D32BBF  | 50                           | push eax                                |
+05D32BC0  | 66:0F7EC0                    | movd eax,xmm0                           |
+05D32BC4  | 0FB7C0                       | movzx eax,ax                            |
+05D32BC7  | 50                           | push eax                                |
+05D32BC8  | 8D85 D0FEFFFF                | lea eax,dword ptr ss:[ebp-130]          |
+05D32BCE  | 68 C4C9D505                  | push 5D5C9C4                            | 5D5C9C4:"登陆成功!\r\n过期时间:%04d年%02d月%02d日 %02d时%02d分%02d秒\r\n"
+05D32BD3  | 50                           | push eax                                |
+05D32BD4  | E8 F71B0000                  | call 5D347D0                            |
+05D32BD9  | E8 5FC30700                  | call 5DAEF3D                            |
+05D32BDE  | 83C4 20                      | add esp,20                              |
+05D32BE1  | 6A 00                        | push 0                                  |
+05D32BE3  | 6A 00                        | push 0                                  |
+05D32BE5  | 68 F0000000                  | push F0                                 |
+05D32BEA  | FF73 54                      | push dword ptr ds:[ebx+54]              |
+05D32BED  | FFD0                         | call eax                                |
+05D32BEF  | 8BB5 D0FEFFFF                | mov esi,dword ptr ss:[ebp-130]          |
+05D32BF5  | 85C0                         | test eax,eax                            |
+05D32BF7  | 74 28                        | je 5D32C21                              |
+05D32BF9  | 68 88130000                  | push 1388                               |
+05D32BFE  | 6A 00                        | push 0                                  |
+05D32C00  | 6A 40                        | push 40                                 |
+05D32C02  | 68 00CAD505                  | push 5D5CA00                            | 5D5CA00:"提示 (5s后自动关闭)"
+05D32C07  | 56                           | push esi                                |
+05D32C08  | FF73 04                      | push dword ptr ds:[ebx+4]               |
+05D32C0B  | E8 4DD40700                  | call 5DB005D                            |
+05D32C10  | 90                           | nop                                     |
+05D32C11  | 6A 01                        | push 1                                  |
+05D32C13  | FF73 04                      | push dword ptr ds:[ebx+4]               |
+05D32C16  | E8 F6D10700                  | call 5DAFE11                            |
+05D32C1B  | 90                           | nop                                     |
+05D32C1C  | E9 CB010000                  | jmp 5D32DEC                             |
+05D32C21  | 6A 40                        | push 40                                 |
+05D32C23  | 68 08C9D505                  | push 5D5C908                            |
+05D32C28  | 56                           | push esi                                |
+05D32C29  | FF73 04                      | push dword ptr ds:[ebx+4]               |
+05D32C2C  | E8 EFBD0700                  | call 5DAEA20                            |
+05D32C31  | 90                           | nop                                     |
+05D32C32  | 6A 01                        | push 1                                  |
+05D32C34  | FF73 04                      | push dword ptr ds:[ebx+4]               |
+05D32C37  | E8 36D20700                  | call 5DAFE72                            |
+05D32C3C  | 90                           | nop                                     |
+05D32C3D  | E9 AA010000                  | jmp 5D32DEC                             |
+05D32C42  | 8B9D D4FEFFFF                | mov ebx,dword ptr ss:[ebp-12C]          |
+05D32C48  | 6A 10                        | push 10                                 |
+05D32C4A  | 68 08C9D505                  | push 5D5C908                            |
+05D32C4F  | 68 14CAD505                  | push 5D5CA14                            | 5D5CA14:"卡密错误!"
+05D32C54  | E9 8A010000                  | jmp 5D32DE3                             |
+05D32C59  | 8B9D D4FEFFFF                | mov ebx,dword ptr ss:[ebp-12C]          |
+05D32C5F  | 6A 10                        | push 10                                 |
+05D32C61  | 68 08C9D505                  | push 5D5C908                            |
+05D32C66  | 68 20CAD505                  | push 5D5CA20                            | 5D5CA20:"卡密已到期!"
+05D32C6B  | E9 73010000                  | jmp 5D32DE3                             |
+05D32C70  | 8B9D D4FEFFFF                | mov ebx,dword ptr ss:[ebp-12C]          |
+05D32C76  | 6A 10                        | push 10                                 |
+05D32C78  | 68 08C9D505                  | push 5D5C908                            |
+05D32C7D  | 68 2CCAD505                  | push 5D5CA2C                            | 5D5CA2C:"卡密被封停!"
+05D32C82  | E9 5C010000                  | jmp 5D32DE3                             |
+05D32C87  | 8B8D 64FFFFFF                | mov ecx,dword ptr ss:[ebp-9C]           |
+05D32C8D  | 8B85 60FFFFFF                | mov eax,dword ptr ss:[ebp-A0]           |
+05D32C93  | 3BC8                         | cmp ecx,eax                             |
+05D32C95  | 75 1D                        | jne 5D32CB4                             |
+05D32C97  | 8B9D D4FEFFFF                | mov ebx,dword ptr ss:[ebp-12C]          |
+05D32C9D  | 6A 40                        | push 40                                 |
+05D32C9F  | 68 08C9D505                  | push 5D5C908                            |
+05D32CA4  | 68 38CAD505                  | push 5D5CA38                            | 5D5CA38:"已在另一台设备绑定! \r\n已达最多换绑次数, 无法换绑!"
+05D32CA9  | FF73 04                      | push dword ptr ds:[ebx+4]               |
+05D32CAC  | E8 D5BD0700                  | call 5DAEA86                            |
+05D32CB1  | 90                           | nop                                     |
+05D32CB2  | EB 2F                        | jmp 5D32CE3                             |
+05D32CB4  | 2BC1                         | sub eax,ecx                             |
+05D32CB6  | 50                           | push eax                                |
+05D32CB7  | FFB5 5CFFFFFF                | push dword ptr ss:[ebp-A4]              |
+05D32CBD  | 8D85 D0FEFFFF                | lea eax,dword ptr ss:[ebp-130]          |
+05D32CC3  | FFB5 58FFFFFF                | push dword ptr ss:[ebp-A8]              |
+05D32CC9  | 68 70CAD505                  | push 5D5CA70                            | 5D5CA70:"已在另一台设备绑定! 是否立即换绑到本机?\r\n本次换绑需扣除:%lld秒\r\n剩余换绑次数:%d次\r\n"
+05D32CCE  | 50                           | push eax                                |
+05D32CCF  | E8 FC1A0000                  | call 5D347D0                            |
+05D32CD4  | 8BB5 D0FEFFFF                | mov esi,dword ptr ss:[ebp-130]          |
+05D32CDA  | 83C4 14                      | add esp,14                              |
+05D32CDD  | 8B9D D4FEFFFF                | mov ebx,dword ptr ss:[ebp-12C]          |
+05D32CE3  | 6A 44                        | push 44                                 |
+05D32CE5  | 68 08C9D505                  | push 5D5C908                            |
+05D32CEA  | 56                           | push esi                                |
+05D32CEB  | FF73 04                      | push dword ptr ds:[ebx+4]               |
+05D32CEE  | E8 FABD0700                  | call 5DAEAED                            |
+05D32CF3  | 90                           | nop                                     |
+05D32CF4  | 6A 00                        | push 0                                  |
+05D32CF6  | 83F8 06                      | cmp eax,6                               |
+05D32CF9  | 0F85 35FFFFFF                | jne 5D32C34                             |
+05D32CFF  | E8 A2C20700                  | call 5DAEFA6                            |
+05D32D04  | 6A 00                        | push 0                                  |
+05D32D06  | 68 F5000000                  | push F5                                 |
+05D32D0B  | FF73 48                      | push dword ptr ds:[ebx+48]              |
+05D32D0E  | FFD0                         | call eax                                |
+05D32D10  | E9 D7000000                  | jmp 5D32DEC                             |
+05D32D15  | 8B9D D4FEFFFF                | mov ebx,dword ptr ss:[ebp-12C]          |
+05D32D1B  | 6A 10                        | push 10                                 |
+05D32D1D  | 68 08C9D505                  | push 5D5C908                            |
+05D32D22  | 68 C4CAD505                  | push 5D5CAC4                            | 5D5CAC4:"代理商被禁用! 该代理下所有卡密无法登录!"
+05D32D27  | E9 B7000000                  | jmp 5D32DE3                             |
+05D32D2C  | 8B9D D4FEFFFF                | mov ebx,dword ptr ss:[ebp-12C]          |
+05D32D32  | 6A 10                        | push 10                                 |
+05D32D34  | 68 08C9D505                  | push 5D5C908                            |
+05D32D39  | 68 ECCAD505                  | push 5D5CAEC                            | 5D5CAEC:"登陆数量已达到上限!"
+05D32D3E  | FF73 04                      | push dword ptr ds:[ebx+4]               |
+05D32D41  | E8 0DBE0700                  | call 5DAEB53                            |
+05D32D46  | 90                           | nop                                     |
+05D32D47  | 57                           | push edi                                |
+05D32D48  | 8D4D D0                      | lea ecx,dword ptr ss:[ebp-30]           |
+05D32D4B  | E8 00050000                  | call 5D33250                            |
+05D32D50  | 51                           | push ecx                                |
+05D32D51  | E8 38D20700                  | call 5DAFF8E                            |
+05D32D56  | 90                           | nop                                     |
+05D32D57  | 50                           | push eax                                |
+05D32D58  | 8D4D 90                      | lea ecx,dword ptr ss:[ebp-70]           |
+05D32D5B  | E8 70050000                  | call 5D332D0                            |
+05D32D60  | E9 87000000                  | jmp 5D32DEC                             |
+05D32D65  | 6A 10                        | push 10                                 |
+05D32D67  | 68 08C9D505                  | push 5D5C908                            |
+05D32D6C  | 68 00CBD505                  | push 5D5CB00                            | 5D5CB00:"网络连接被断开!"
+05D32D71  | EB 48                        | jmp 5D32DBB                             |
+05D32D73  | 8B9D D4FEFFFF                | mov ebx,dword ptr ss:[ebp-12C]          |
+05D32D79  | 6A 10                        | push 10                                 |
+05D32D7B  | 68 08C9D505                  | push 5D5C908                            |
+05D32D80  | 68 10CBD505                  | push 5D5CB10                            | 5D5CB10:"数据接收出错!"
+05D32D85  | EB 5C                        | jmp 5D32DE3                             |
+05D32D87  | 8B9D D4FEFFFF                | mov ebx,dword ptr ss:[ebp-12C]          |
+05D32D8D  | 6A 10                        | push 10                                 |
+05D32D8F  | 68 08C9D505                  | push 5D5C908                            |
+05D32D94  | 68 20CBD505                  | push 5D5CB20                            | 5D5CB20:"数据发送出错!"
+05D32D99  | EB 48                        | jmp 5D32DE3                             |
+05D32D9B  | 8B9D D4FEFFFF                | mov ebx,dword ptr ss:[ebp-12C]          |
+05D32DA1  | 6A 10                        | push 10                                 |
+05D32DA3  | 68 08C9D505                  | push 5D5C908                            |
+05D32DA8  | 68 30CBD505                  | push 5D5CB30                            | 5D5CB30:"服务器连接失败!"
+05D32DAD  | EB 34                        | jmp 5D32DE3                             |
+05D32DAF  | 6A 10                        | push 10                                 |
+05D32DB1  | 68 08C9D505                  | push 5D5C908                            |
+05D32DB6  | 68 40CBD505                  | push 5D5CB40                            | 5D5CB40:"未知错误!"
+05D32DBB  | 8B9D D4FEFFFF                | mov ebx,dword ptr ss:[ebp-12C]          |
+05D32DC1  | FF73 04                      | push dword ptr ds:[ebx+4]               |
+05D32DC4  | E8 F3BD0700                  | call 5DAEBBC                            |
+05D32DC9  | 90                           | nop                                     |
+05D32DCA  | 6A 00                        | push 0                                  |
+05D32DCC  | FF73 04                      | push dword ptr ds:[ebx+4]               |
+05D32DCF  | E8 F9D00700                  | call 5DAFECD                            |
+05D32DD4  | 90                           | nop                                     |
+05D32DD5  | EB 15                        | jmp 5D32DEC                             |
+05D32DD7  | 6A 10                        | push 10                                 |
+05D32DD9  | 68 ACC9D505                  | push 5D5C9AC                            |
+05D32DDE  | 68 B4C9D505                  | push 5D5C9B4                            | 5D5C9B4:"卡密长度错误!"
+05D32DE3  | FF73 04                      | push dword ptr ds:[ebx+4]               |
+05D32DE6  | E8 37BE0700                  | call 5DAEC22                            |
+05D32DEB  | 90                           | nop                                     |
+05D32DEC  | C645 FC 01                   | mov byte ptr ss:[ebp-4],1               |
+05D32DF0  | 837D E4 10                   | cmp dword ptr ss:[ebp-1C],10            |
+05D32DF4  | 72 0B                        | jb 5D32E01                              |
+05D32DF6  | FF75 D0                      | push dword ptr ss:[ebp-30]              |
+05D32DF9  | E8 AD9F0000                  | call 5D3CDAB                            |
+05D32DFE  | 83C4 04                      | add esp,4                               |
+05D32E01  | 8D4D B8                      | lea ecx,dword ptr ss:[ebp-48]           |
+05D32E04  | C745 E4 0F000000             | mov dword ptr ss:[ebp-1C],F             |
+05D32E0B  | C745 E0 00000000             | mov dword ptr ss:[ebp-20],0             |
+05D32E12  | C645 D0 00                   | mov byte ptr ss:[ebp-30],0              |
+05D32E16  | E8 D5430000                  | call 5D371F0                            |
+05D32E1B  | 8B45 A4                      | mov eax,dword ptr ss:[ebp-5C]           |
+05D32E1E  | 85C0                         | test eax,eax                            |
+05D32E20  | 74 06                        | je 5D32E28                              |
+05D32E22  | 50                           | push eax                                |
+05D32E23  | E8 69940000                  | call 5D3C291                            |
+05D32E28  | 8D56 F0                      | lea edx,dword ptr ds:[esi-10]           |
+05D32E2B  | C645 FC 00                   | mov byte ptr ss:[ebp-4],0               |
+05D32E2F  | 83CE FF                      | or esi,FFFFFFFF                         |
+05D32E32  | 8D4A 0C                      | lea ecx,dword ptr ds:[edx+C]            |
+05D32E35  | 8BC6                         | mov eax,esi                             |
+05D32E37  | F0:0FC101                    | lock xadd dword ptr ds:[ecx],eax        |
+05D32E3B  | 48                           | dec eax                                 |
+05D32E3C  | 85C0                         | test eax,eax                            |
+05D32E3E  | 7F 08                        | jg 5D32E48                              |
+05D32E40  | 8B0A                         | mov ecx,dword ptr ds:[edx]              |
+05D32E42  | 52                           | push edx                                |
+05D32E43  | 8B01                         | mov eax,dword ptr ds:[ecx]              |
+05D32E45  | FF50 04                      | call dword ptr ds:[eax+4]               |
+05D32E48  | 83C7 F0                      | add edi,FFFFFFF0                        |
+05D32E4B  | C745 FC FFFFFFFF             | mov dword ptr ss:[ebp-4],FFFFFFFF       |
+05D32E52  | 8D47 0C                      | lea eax,dword ptr ds:[edi+C]            |
+05D32E55  | F0:0FC130                    | lock xadd dword ptr ds:[eax],esi        |
+05D32E59  | 4E                           | dec esi                                 |
+05D32E5A  | 85F6                         | test esi,esi                            |
+05D32E5C  | 7F 08                        | jg 5D32E66                              |
+05D32E5E  | 8B0F                         | mov ecx,dword ptr ds:[edi]              |
+05D32E60  | 57                           | push edi                                |
+05D32E61  | 8B01                         | mov eax,dword ptr ds:[ecx]              |
+05D32E63  | FF50 04                      | call dword ptr ds:[eax+4]               |
+05D32E66  | 33C0                         | xor eax,eax                             |
+05D32E68  | 8B4D F4                      | mov ecx,dword ptr ss:[ebp-C]            |
+05D32E6B  | 64:890D 00000000             | mov dword ptr fs:[0],ecx                |
+05D32E72  | 59                           | pop ecx                                 |
+05D32E73  | 5F                           | pop edi                                 |
+05D32E74  | 5E                           | pop esi                                 |
+05D32E75  | 5B                           | pop ebx                                 |
+05D32E76  | 8B4D F0                      | mov ecx,dword ptr ss:[ebp-10]           |
+05D32E79  | 33CD                         | xor ecx,ebp                             |
+05D32E7B  | E8 309F0000                  | call 5D3CDB0                            |
+05D32E80  | 8BE5                         | mov esp,ebp                             |
+05D32E82  | 5D                           | pop ebp                                 |
+05D32E83  | C2 1000                      | ret 10                                  |
+05D32E86  | 8BFF                         | mov edi,edi                             |
+05D32E88  | 9B                           | fwait                                   |
+05D32E89  | 2D D305872D                  | sub eax,2D8705D3                        |
+05D32E8E  | D305 732DD305                | rol dword ptr ds:[5D32D73],cl           |
+05D32E94  | 65:2D D305212B               | sub eax,2B2105D3                        |
+05D32E9A  | D305 422CD305                | rol dword ptr ds:[5D32C42],cl           |
+05D32EA0  | 59                           | pop ecx                                 |
+05D32EA1  | 2C D3                        | sub al,D3                               |
+05D32EA3  | 05 702CD305                  | add eax,5D32C70                         |
+05D32EA8  | 872CD3                       | xchg dword ptr ds:[ebx+edx*8],ebp       |
+05D32EAB  | 05 152DD305                  | add eax,5D32D15                         |
+05D32EB0  | 2C 2D                        | sub al,2D                               |
+05D32EB2  | D305 CCCCCCCC                | rol dword ptr ds:[CCCCCCCC],cl          |
+05D32EB8  | CC                           | int3                                    |
+05D32EB9  | CC                           | int3                                    |
+05D32EBA  | CC                           | int3                                    |
+05D32EBB  | CC                           | int3                                    |
+05D32EBC  | CC                           | int3                                    |
+05D32EBD  | CC                           | int3                                    |
+05D32EBE  | CC                           | int3                                    |
+05D32EBF  | CC                           | int3                                    |
+05D32EC0  | 55                           | push ebp                                |
+05D32EC1  | 8BEC                         | mov ebp,esp                             |
+05D32EC3  | 6A FF                        | push FFFFFFFF                           |
+05D32EC5  | 68 E854D505                  | push 5D554E8                            |
+05D32ECA  | 64:A1 00000000               | mov eax,dword ptr fs:[0]                |
+05D32ED0  | 50                           | push eax                                |
+05D32ED1  | 51                           | push ecx                                |
+05D32ED2  | 56                           | push esi                                |
+05D32ED3  | A1 DC15D605                  | mov eax,dword ptr ds:[5D615DC]          |
+05D32ED8  | 33C5                         | xor eax,ebp                             |
+05D32EDA  | 50                           | push eax                                |
+05D32EDB  | 8D45 F4                      | lea eax,dword ptr ss:[ebp-C]            |
+05D32EDE  | 64:A3 00000000               | mov dword ptr fs:[0],eax                |
+05D32EE4  | 8BF1                         | mov esi,ecx                             |
+05D32EE6  | 8975 F0                      | mov dword ptr ss:[ebp-10],esi           |
+05D32EE9  | C746 04 00000000             | mov dword ptr ds:[esi+4],0              |
+05D32EF0  | C746 14 00000000             | mov dword ptr ds:[esi+14],0             |
+05D32EF7  | C746 18 00000000             | mov dword ptr ds:[esi+18],0             |
+05D32EFE  | C746 1C 00000000             | mov dword ptr ds:[esi+1C],0             |
+05D32F05  | 8D4E 28                      | lea ecx,dword ptr ds:[esi+28]           |
+05D32F08  | C745 FC 00000000             | mov dword ptr ss:[ebp-4],0              |
+05D32F0F  | E8 8C040000                  | call 5D333A0                            |
+05D32F14  | C746 20 50CDD505             | mov dword ptr ds:[esi+20],5D5CD50       |
+05D32F1B  | 8BC6                         | mov eax,esi                             |
+05D32F1D  | C746 24 48CDD505             | mov dword ptr ds:[esi+24],5D5CD48       |
+05D32F24  | C706 68CDD505                | mov dword ptr ds:[esi],5D5CD68          | 5D5CD68:&"U嬱儅\x1C"
+05D32F2A  | C746 20 60CDD505             | mov dword ptr ds:[esi+20],5D5CD60       |
+05D32F31  | C746 24 58CDD505             | mov dword ptr ds:[esi+24],5D5CD58       |
+05D32F38  | C746 54 0F000000             | mov dword ptr ds:[esi+54],F             |
+05D32F3F  | C746 50 00000000             | mov dword ptr ds:[esi+50],0             |
+05D32F46  | C646 40 00                   | mov byte ptr ds:[esi+40],0              |
+05D32F4A  | C746 58 00000000             | mov dword ptr ds:[esi+58],0             |
+05D32F51  | C746 5C 00000000             | mov dword ptr ds:[esi+5C],0             |
+05D32F58  | 8B4D F4                      | mov ecx,dword ptr ss:[ebp-C]            |
+05D32F5B  | 64:890D 00000000             | mov dword ptr fs:[0],ecx                |
+05D32F62  | 59                           | pop ecx                                 |
+05D32F63  | 5E                           | pop esi                                 |
+05D32F64  | 8BE5                         | mov esp,ebp                             |
+05D32F66  | 5D                           | pop ebp                                 |
+05D32F67  | C3                           | ret                                     |
